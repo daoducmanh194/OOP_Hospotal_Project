@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="714.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DoctorEditController">
+   <bottom>
+      <AnchorPane prefHeight="68.0" prefWidth="856.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="saveButton" layoutX="398.0" layoutY="15.0" mnemonicParsing="false" onAction="#saveDiagAdv" prefHeight="39.0" prefWidth="90.0" text="Save" textFill="#05a3f8">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="266.0" prefWidth="866.0" style="-fx-border-color: #006400;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="262.0" prefWidth="320.0" style="-fx-background-color: #00ffff;">
+               <children>
+                  <Label layoutX="13.0" layoutY="66.0" text="Name:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="23.0" text="ID:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="109.0" text="Age:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="128.0" layoutY="109.0" text="Gender:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="168.0" text="Phone:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="215.0" text="Address:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="patientID" editable="false" layoutX="51.0" layoutY="22.0" onAction="#showInformation" prefHeight="24.0" prefWidth="253.0" />
+                  <TextField fx:id="patientName" editable="false" layoutX="83.0" layoutY="65.0" onAction="#showInformation" prefHeight="24.0" prefWidth="222.0" />
+                  <TextField fx:id="patientAge" editable="false" layoutX="63.0" layoutY="108.0" onAction="#showInformation" prefHeight="24.0" prefWidth="61.0" />
+                  <TextField fx:id="patientGender" editable="false" layoutX="210.0" layoutY="108.0" onAction="#showInformation" prefHeight="24.0" prefWidth="98.0" />
+                  <TextField fx:id="patientPhone" editable="false" layoutX="94.0" layoutY="167.0" onAction="#showInformation" prefHeight="24.0" prefWidth="214.0" />
+                  <TextField fx:id="patientAddress" editable="false" layoutX="106.0" layoutY="214.0" onAction="#showInformation" prefHeight="24.0" prefWidth="202.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="320.0" layoutY="2.0" prefHeight="262.0" prefWidth="549.0" style="-fx-background-color: #7fffd4;">
+               <children>
+                  <ImageView fitHeight="256.0" fitWidth="233.0" layoutX="302.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/male_doctor.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="25.0" layoutY="23.0" text="ID:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="110.0" text="Special:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="163.0" text="Age:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="145.0" layoutY="164.0" text="Gender:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="214.0" text="Phone:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="68.0" text="Name:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="doctorID" editable="false" layoutX="62.0" layoutY="22.0" onAction="#showInformation" prefHeight="24.0" prefWidth="234.0" />
+                  <TextField fx:id="doctorName" editable="false" layoutX="92.0" layoutY="67.0" onAction="#showInformation" prefHeight="24.0" prefWidth="202.0" />
+                  <TextField fx:id="doctorSpecialization" editable="false" layoutX="101.0" layoutY="109.0" onAction="#showInformation" prefHeight="24.0" prefWidth="194.0" />
+                  <TextField fx:id="doctorAge" editable="false" layoutX="72.0" layoutY="162.0" onAction="#showInformation" prefHeight="24.0" prefWidth="68.0" />
+                  <TextField fx:id="doctorGender" editable="false" layoutX="230.0" layoutY="162.0" onAction="#showInformation" prefHeight="24.0" prefWidth="64.0" />
+                  <TextField fx:id="doctorPhone" editable="false" layoutX="92.0" layoutY="213.0" onAction="#showInformation" prefHeight="24.0" prefWidth="201.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="407.0" prefWidth="874.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="12.0" prefHeight="54.0" prefWidth="862.0">
+               <children>
+                  <Button fx:id="obstetricButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#osbtetricShow" text="Obstetric" textFill="#f50000">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="surgicalButton" layoutX="128.0" layoutY="14.0" mnemonicParsing="false" onAction="#surgicalShow" text="Surgical" textFill="RED">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="AnGynlogyButton" layoutX="232.0" layoutY="14.0" mnemonicParsing="false" onAction="#AnGynlogyShow" prefHeight="29.0" prefWidth="113.0" text="AnGynlogy" textFill="#f20000">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="testButton" layoutX="361.0" layoutY="16.0" mnemonicParsing="false" onAction="#testShow" text="Test" textFill="RED">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="diagAdvButton" layoutX="431.0" layoutY="14.0" mnemonicParsing="false" onAction="#diagAdvShow" text="Diag&amp;Adv" textFill="#fc0000">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Button>
+                  <DatePicker fx:id="selectDate" layoutX="616.0" layoutY="18.0" prefHeight="28.0" prefWidth="232.0" />
+                  <Label layoutX="552.0" layoutY="21.0" text="Date:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="obstetricPane" layoutY="49.0" prefHeight="349.0" prefWidth="871.0" visible="false">
+               <children>
+                  <ScrollPane prefHeight="349.0" prefWidth="885.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="882.0">
+                           <children>
+                              <GridPane layoutX="36.0" layoutY="51.0" prefHeight="248.0" prefWidth="778.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Test Name">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Normal" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Result" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Huyet Ap Tam Thu Tren" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Huyet Ap Tam Thu Duoi" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Dien Tim" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Sieu Am O Bung" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Sieu Am Tuyen Giap" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField editable="false" text="120" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultHuyetApTTT" editable="false" onAction="#osbtetricShow" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField editable="false" text="80" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultHuyetApTTD" editable="false" onAction="#osbtetricShow" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField editable="false" text="60-100" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultDienTim" editable="false" onAction="#osbtetricShow" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField editable="false" text="bt" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultSieuAmOBung" editable="false" onAction="#osbtetricShow" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField editable="false" text="bt" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultSieuAmTuyenGiap" editable="false" onAction="#osbtetricShow" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="surgicalPane" layoutY="49.0" prefHeight="349.0" prefWidth="885.0" visible="false">
+               <children>
+                  <ScrollPane prefHeight="349.0" prefWidth="856.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="348.0" prefWidth="856.0">
+                           <children>
+                              <GridPane layoutX="32.0" layoutY="32.0" prefHeight="275.0" prefWidth="774.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Test Name">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Normal" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Result" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Mat" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Tai" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Mui" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Hong" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Rang" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField editable="false" text="8-10/10" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultMat" editable="false" onAction="#surgicalShow" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField editable="false" text="bt" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultTai" editable="false" onAction="#surgicalShow" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField editable="false" text="bt" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultMui" editable="false" onAction="#surgicalShow" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField editable="false" text="bt" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultHong" editable="false" onAction="#surgicalShow" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField editable="false" text="bt" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultRang" editable="false" onAction="#surgicalShow" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anGynlogyPane" layoutY="49.0" prefHeight="353.0" prefWidth="885.0" visible="false">
+               <children>
+                  <ScrollPane prefHeight="353.0" prefWidth="856.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="356.0" prefWidth="850.0">
+                           <children>
+                              <GridPane layoutX="29.0" layoutY="32.0" prefHeight="285.0" prefWidth="785.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Test Name">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Normal" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Result" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Nam Khoa" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Phu Khoa" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField text="bt" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultNam" onAction="#AnGynlogyShow" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField text="bt" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="resultNu" onAction="#AnGynlogyShow" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="testPane" layoutY="49.0" prefHeight="358.0" prefWidth="885.0" visible="false">
+               <children>
+                  <ScrollPane prefHeight="358.0" prefWidth="856.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="451.0" prefWidth="854.0">
+                           <children>
+                              <GridPane layoutX="24.0" layoutY="29.0" prefHeight="390.0" prefWidth="793.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Test Name">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Normal" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Result" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="HGSAB" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="HCV" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="AFP" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="URE" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="NSE" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="CYFRA" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="CA125" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="PSA" GridPane.rowIndex="8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="ASLO" GridPane.rowIndex="9">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="FT3" GridPane.rowIndex="10">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="PLT" GridPane.rowIndex="11">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField editable="false" text="&lt; 1.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="resultHGSAB" editable="false" onAction="#testShow" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField editable="false" text="bt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="resultHCV" editable="false" onAction="#testShow" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField editable="false" text="&lt; 10.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="resultAFP" editable="false" onAction="#testShow" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <TextField editable="false" text="2.1 - 7.1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="resultURE" editable="false" onAction="#testShow" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField editable="false" text="0 - 3.7" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="resultNSE" editable="false" onAction="#testShow" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <TextField editable="false" text="&lt; 2.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <TextField fx:id="resultCYFRA" editable="false" onAction="#testShow" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <TextField editable="false" text="35.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <TextField fx:id="resultCA125" editable="false" onAction="#testShow" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <TextField editable="false" text="&lt; 4.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <TextField fx:id="resultPSA" editable="false" onAction="#testShow" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <TextField editable="false" text="&lt;= 200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <TextField fx:id="resultASLO" editable="false" onAction="#testShow" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <TextField text="3.1 - 6.8" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <TextField fx:id="resultFT3" editable="false" onAction="#testShow" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                                    <TextField editable="false" text="150 - 400" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <TextField fx:id="resultPLT" editable="false" onAction="#testShow" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="diagAdvPane" layoutY="49.0" prefHeight="358.0" prefWidth="885.0" visible="false">
+               <children>
+                  <ScrollPane prefHeight="358.0" prefWidth="856.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="360.0" prefWidth="855.0">
+                           <children>
+                              <GridPane layoutX="31.0" layoutY="36.0" prefHeight="288.0" prefWidth="785.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="239.0" minHeight="10.0" prefHeight="230.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Diagnostic">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Advice" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="diagnostic" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                                    <TextArea fx:id="advice" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,84 @@
+create table doctor(
+did varchar(15) not null unique primary key,
+specialization varchar(255),
+salary int,
+f_name varchar(15),
+l_name varchar(15),
+gender varchar(1),
+dob date,
+phone_number int,
+email varchar(50),
+address varchar(50),
+user_name varchar(50),
+password varchar(50)
+);
+
+create table patient(
+pid varchar(15) not null unique primary key,
+cid varchar(15),
+f_name varchar(15),
+l_name varchar(15),
+gender varchar(1),
+weight int,
+height int,
+phone_number int,
+email varchar(50),
+address varchar(50),
+dob date,
+user_name varchar(50),
+password varchar(50)
+);
+
+create table phieu_kham(
+pkid varchar(15) not null unique primary key,
+pid varchar(15),
+did varchar(15),
+test_date date,
+diagnostic varchar(200),
+advice varchar(200),
+loan int,
+foreign key (pid) references patient(pid),
+foreign key (did) references doctor(did)
+);
+
+create table xet_nghiem(
+hgsab int,
+hcv varchar(10),
+afp int,
+ure int,
+nse int,
+cyfra int,
+ca125 int,
+psa int,
+aslo int,
+ft3 int,
+plt int,
+pkid varchar(15),
+foreign key (pkid) references phieu_kham(pkid)
+);
+
+create table kham_san(
+nam_khoa varchar(50),
+phu_khoa varchar(50),
+pkid varchar(15)
+);
+
+create table kham_noi(
+huyet_ap_ttt varchar(6),
+huyet_ap_ttd varchar(6),
+dien_tim int,
+sieu_am_o_bung varchar(50),
+sieu_am_tuyen_giap varchar(50),
+pkid varchar(15),
+foreign key (pkid) references phieu_kham(pkid)
+);
+
+create table kham_ngoai(
+kham_mat varchar(6),
+kham_tai varchar(50),
+kham_mui varchar(50),
+kham_hong varchar(50),
+kham_rang varchar(50),
+pkid varchar(15),
+foreign key (pkid) references phieu_kham(pkid)
+);

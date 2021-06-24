@@ -1,0 +1,116 @@
+package database;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import model.Doctor;
+import model.Patient;
+
+public class SearchDBFollowPhone {
+
+	private String jdbcURL = "jdbc:postgresql://localhost:5432/HealthCare";
+	private String username = "postgres";
+	private String password = "genkidao263"; 
+	
+	static Connection connection = null;
+	static PreparedStatement statement = null;
+	static Patient new_patient = new Patient(null, null, null, null, null, null, null, null, null, null, null, 0, 0);
+	static Doctor new_doctor = new Doctor(null, null, null, null, null, null, null, null, null, null, null, 0);
+	
+	public Patient searchPatientFollowPhone(int phone) {
+		try {
+			connection = DriverManager.getConnection(jdbcURL, username, password);
+			System.out.println("Connected to Postgesql Server");
+			
+			// Query to find patient follow patient's id
+			String sql = "SELECT * FROM patient WHERE phone_number = ? ";
+						
+			statement = connection.prepareStatement(sql);
+			
+			statement.setInt(1, phone);
+			
+			ResultSet result = statement.executeQuery();
+
+			System.out.println("A new patient's information has been inserted!");
+			
+			while(result.next()) {
+				String patientID = result.getString("pid");
+				String companyID = result.getString("cid");
+				String firstname = result.getString("f_name");
+				String lastname = result.getString("l_name");
+				String gender = result.getString("gender");
+				Date dob = result.getDate("dob");
+				int weight = result.getInt("weight");
+				int height = result.getInt("height");
+				int iphonenumber = result.getInt("phone_number");
+				String phonenumber = String.valueOf(iphonenumber);
+				String pemail = result.getString("email");
+				String address = result.getString("address");
+				String patientUsername = result.getString("user_name");
+				String patientPassword = result.getString("password");
+
+				Patient p = new Patient(firstname, lastname, address, dob, gender, phonenumber, pemail,
+						patientUsername, patientPassword, patientID, companyID, weight, height);
+
+				new_patient = p;
+			}
+			
+			statement.close();
+		} catch (SQLException e) {
+			System.out.println("Error when connecting to Postgesql server");
+			e.printStackTrace();
+		} 
+		return new_patient;
+	}
+	
+	public Doctor searchDoctorFollowdPhone(int phone) {
+		try {
+			connection = DriverManager.getConnection(jdbcURL, username, password);
+			System.out.println("Connected to Postgesql Server");
+			
+			// Query to find patient follow patient's id
+			String sql = "SELECT * FROM doctor WHERE phone_number = ? ";
+						
+			statement = connection.prepareStatement(sql);
+			
+			statement.setInt(1, phone);
+			
+			ResultSet result = statement.executeQuery();
+
+			System.out.println("A new doctor's information has been inserted!");
+			
+			while(result.next()) {
+				String doctorID = result.getString("did");
+				String specialization = result.getString("specialization");
+				String firstname = result.getString("f_name");
+				String lastname = result.getString("l_name");
+				String gender = result.getString("gender");
+				Date dob = result.getDate("dob");
+				int salary = result.getInt("salary");
+				int iphonenumber = result.getInt("phone_number");
+				String phonenumber = String.valueOf(iphonenumber);
+				String demail = result.getString("email");
+				String address = result.getString("address");
+				String doctorUsername = result.getString("user_name");
+				String doctorPassword = result.getString("password");
+
+				Doctor d = new Doctor(firstname, lastname, address, dob, gender, phonenumber,
+						 demail, doctorUsername, doctorPassword, doctorID, specialization, salary);
+
+				new_doctor = d;
+			}
+			
+			statement.close();
+		} catch (SQLException e) {
+			System.out.println("Error when connecting to Postgesql server");
+			e.printStackTrace();
+		} 
+		return new_doctor;
+	}
+
+
+}

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
+   <bottom>
+      <AnchorPane prefHeight="119.0" prefWidth="632.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backSignUpButton" layoutX="236.0" layoutY="43.0" mnemonicParsing="false" onAction="#backSignUpSignIn" prefHeight="33.0" prefWidth="93.0" text="Back">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="submitSignUpButton" layoutX="380.0" layoutY="43.0" mnemonicParsing="false" onAction="#submitSignUp" text="Submit">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <left>
+      <AnchorPane prefHeight="645.0" prefWidth="696.0" BorderPane.alignment="CENTER">
+         <children>
+            <TitledPane alignment="CENTER" animated="false" contentDisplay="CENTER" layoutX="-2.0" prefHeight="57.0" prefWidth="694.0" text="Patient Sign Up" textFill="#2500f8">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </TitledPane>
+            <Label layoutX="15.0" layoutY="97.0" text="Firstname: ">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="153.0" text="Lastname:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="197.0" text="Date of birth:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="249.0" text="Phone Number:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="298.0" text="Email:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="345.0" text="Adress:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstnameSignUp" layoutX="189.0" layoutY="96.0" prefHeight="29.0" prefWidth="255.0" promptText="Firstname">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="lastnameSignUp" layoutX="186.0" layoutY="151.0" prefHeight="29.0" prefWidth="257.0" promptText="Lastname">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="yearSignUp" layoutX="189.0" layoutY="195.0" prefHeight="29.0" prefWidth="68.0" promptText="Year">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="monthSignUp" layoutX="291.0" layoutY="195.0" prefHeight="29.0" prefWidth="72.0" promptText="Month">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="dateSignUp" layoutX="398.0" layoutY="195.0" prefHeight="29.0" prefWidth="66.0" promptText="Date">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="phonenumberSignUp" layoutX="189.0" layoutY="247.0" prefHeight="29.0" prefWidth="277.0" promptText="Phone number">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="emailSignUp" layoutX="186.0" layoutY="296.0" prefHeight="29.0" prefWidth="318.0" promptText="Email">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="addressSignUp" layoutX="189.0" layoutY="343.0" prefHeight="29.0" prefWidth="373.0" promptText="Adress">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Text fill="#4202f2" layoutX="183.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resgister Information">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Label layoutX="26.0" layoutY="443.0" text="Username:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="504.0" text="Password:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="572.0" text="Confirm Password:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameSignUp" layoutX="227.0" layoutY="441.0" prefHeight="29.0" prefWidth="391.0" promptText="Username">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordSignUp" layoutX="229.0" layoutY="502.0" prefHeight="29.0" prefWidth="390.0" promptText="Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="passwordConfirmedSignUp" layoutX="232.0" layoutY="570.0" prefHeight="29.0" prefWidth="385.0" promptText="Rewrite Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+            <RadioButton fx:id="maleButton" layoutX="463.0" layoutY="98.0" mnemonicParsing="false" text="Male">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="femaleButton" layoutX="559.0" layoutY="98.0" mnemonicParsing="false" text="Female">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

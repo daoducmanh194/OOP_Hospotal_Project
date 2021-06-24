@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServiceFormController">
+   <top>
+      <AnchorPane prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="258.0" layoutY="20.0" text="Medical Registration" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="69.0" prefWidth="686.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="sendButton" layoutX="495.0" layoutY="16.0" mnemonicParsing="false" onAction="#sendRegistrationForm" prefHeight="39.0" prefWidth="90.0" text="Send" textFill="#02cbf8">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton" layoutX="366.0" layoutY="15.0" mnemonicParsing="false" onAction="#returntoView" text="Back" textFill="#03d1f5">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <left>
+      <AnchorPane prefHeight="632.0" prefWidth="476.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane layoutY="1.0" prefHeight="631.0" prefWidth="478.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="631.0" prefWidth="473.0" style="-fx-background-color: #7fffd4;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="4.0" text="Select Service" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="obstetricDate" layoutX="141.0" layoutY="78.0" onAction="#sendRegistrationObstetric" prefHeight="24.0" prefWidth="294.0" />
+                        <DatePicker fx:id="surgicalDate" layoutX="144.0" layoutY="147.0" onAction="#sendRegistrationSurgical" prefHeight="24.0" prefWidth="288.0" />
+                        <DatePicker fx:id="androGynDate" layoutX="145.0" layoutY="216.0" onAction="#sendRegistrationAndroGynlogy" prefHeight="24.0" prefWidth="288.0" />
+                        <DatePicker fx:id="testDate" layoutX="145.0" layoutY="280.0" onAction="#sendRegistrationTest" prefHeight="24.0" prefWidth="293.0" />
+                        <CheckBox fx:id="obstetricCBox" layoutX="26.0" layoutY="42.0" mnemonicParsing="false" onAction="#sendRegistrationObstetric" text="Obstetric Examination">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="surgicalCBox" layoutX="26.0" layoutY="114.0" mnemonicParsing="false" onAction="#sendRegistrationSurgical" text="Surgical Examination">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="androGynCBox" layoutX="26.0" layoutY="183.0" mnemonicParsing="false" onAction="#sendRegistrationAndroGynlogy" text="Andrology/Gynaecology">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="testCBox" layoutX="26.0" layoutY="251.0" mnemonicParsing="false" onAction="#sendRegistrationTest" text="Test">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </CheckBox>
+                        <Label layoutX="14.0" layoutY="382.0" text="Symptoms">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="496.0" text="Service:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="symptomTextArea" layoutX="134.0" layoutY="320.0" prefHeight="152.0" prefWidth="305.0" />
+                        <ComboBox layoutX="130.0" layoutY="495.0" prefHeight="24.0" prefWidth="311.0" />
+                        <Label layoutX="14.0" layoutY="542.0" text="Others:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="supersonicRButton" layoutX="130.0" layoutY="542.0" mnemonicParsing="false" text="Supersonic">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton layoutX="130.0" layoutY="577.0" mnemonicParsing="false" text="X_ray" fx:id="xrayRButton">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <Label layoutX="55.0" layoutY="81.0" text="Date:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="55.0" layoutY="150.0" text="Date:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="55.0" layoutY="219.0" text="Date:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="60.0" layoutY="283.0" text="Date:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="633.0" prefWidth="389.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane layoutX="-2.0" prefHeight="633.0" prefWidth="390.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="631.0" prefWidth="391.0">
+                     <children>
+                        <Label layoutX="70.0" layoutY="14.0" text="Registration Information" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="57.0" layoutY="412.0" text="Service Registration" textFill="#f50000">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextArea editable="false" layoutX="2.0" layoutY="319.0" prefHeight="87.0" prefWidth="377.0" text="Note:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextArea>
+                        <AnchorPane layoutX="4.0" layoutY="43.0" prefHeight="273.0" prefWidth="375.0" style="-fx-background-color: #7fffd4;">
+                           <children>
+                              <Label layoutX="97.0" layoutY="5.0" text="Obstetric Examination" textFill="#f70299">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="37.0" text="Date:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="101.0" layoutY="70.0" text="Surgical Examination" textFill="#ff0285">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="103.0" text="Date:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="91.0" layoutY="144.0" text="Andrology/Gynaecology" textFill="#e805a0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="182.0" text="Date:">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="165.0" layoutY="206.0" text="Test" textFill="#fc00c5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="238.0" text="Date:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="setObsDate" editable="false" layoutX="78.0" layoutY="36.0" onAction="#sendRegistrationObstetric" prefHeight="24.0" prefWidth="277.0" />
+                              <TextField fx:id="setSurDate" editable="false" layoutX="80.0" layoutY="101.0" onAction="#sendRegistrationSurgical" prefHeight="24.0" prefWidth="274.0" />
+                              <TextField fx:id="setAndroGynDate" editable="false" layoutX="85.0" layoutY="182.0" onAction="#sendRegistrationAndroGynlogy" prefHeight="24.0" prefWidth="268.0" />
+                              <TextField fx:id="setTestDate" editable="false" layoutX="87.0" layoutY="237.0" onAction="#sendRegistrationTest" prefHeight="24.0" prefWidth="267.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="4.0" layoutY="433.0" prefHeight="189.0" prefWidth="372.0" style="-fx-background-color: #7fffd4;">
+                           <children>
+                              <GridPane alignment="CENTER" layoutY="10.0" prefHeight="179.0" prefWidth="372.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="54.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="156.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="90.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label contentDisplay="CENTER" text="No." textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Service" textAlignment="CENTER" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Payment" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="1." GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="2." GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="2." GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4." GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="5." GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Obstetric Examination" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Surgical Examination" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Andro/Gynaecology" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Test" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Registration Fee" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Total:" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="obsPay" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="surPay" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField fx:id="androGynPay" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <TextField fx:id="testPay" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField editable="false" text="10,000" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <TextField fx:id="totalPay" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

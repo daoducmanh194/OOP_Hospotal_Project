@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditInputController">
+   <top>
+      <AnchorPane prefHeight="600.0" prefWidth="857.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="136.0" layoutY="148.0" text="Enter patietn ID you eant to edit" textFill="#ff0202">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="patientIDText" alignment="CENTER" layoutX="148.0" layoutY="254.0" prefHeight="46.0" prefWidth="561.0" promptText="patient ID">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="295.0" prefWidth="857.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="nextButton" layoutX="471.0" layoutY="28.0" mnemonicParsing="false" onAction="#toEditForm" prefHeight="39.0" prefWidth="90.0" text="Next" textFill="#01fceb">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton" layoutX="318.0" layoutY="28.0" mnemonicParsing="false" onAction="#toDoctorView" prefHeight="39.0" prefWidth="95.0" text="Back" textFill="#00ffe1">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

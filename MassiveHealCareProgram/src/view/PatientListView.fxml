@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PatientListController">
+   <top>
+      <AnchorPane prefHeight="282.0" prefWidth="837.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="30.0" layoutY="39.0" text="Search with:" textFill="#f80505">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="339.0" layoutY="14.0" text="View all patient" textFill="#f50000">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="71.0" text="First Name:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="371.0" layoutY="71.0" text="Last Name:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="194.0" text="Gender:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="119.0" text="Phone:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="156.0" text="Address:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="238.0" text="From:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="311.0" layoutY="236.0" text="To:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="patientFirstName" layoutX="132.0" layoutY="69.0" prefHeight="24.0" prefWidth="202.0" />
+            <TextField fx:id="patientLastName" layoutX="476.0" layoutY="69.0" />
+            <TextField fx:id="patientPhone" layoutX="133.0" layoutY="117.0" prefHeight="24.0" prefWidth="202.0" />
+            <TextField fx:id="patientAddress" layoutX="133.0" layoutY="154.0" prefHeight="24.0" prefWidth="201.0" />
+            <DatePicker fx:id="patinetFrom" layoutX="80.0" layoutY="233.0" />
+            <DatePicker fx:id="patientTo" layoutX="351.0" layoutY="233.0" />
+            <CheckBox fx:id="patientMale" layoutX="135.0" layoutY="194.0" mnemonicParsing="false" text="Male">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="patientFemale" layoutX="314.0" layoutY="193.0" mnemonicParsing="false" text="Female">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <Button fx:id="searchButton" layoutX="719.0" layoutY="99.0" mnemonicParsing="false" onAction="#searchInformation" prefHeight="84.0" prefWidth="94.0" text="Search" textFill="#0318ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton" layoutX="719.0" layoutY="199.0" mnemonicParsing="false" onAction="#backToView" prefHeight="33.0" prefWidth="95.0" text="Back" textFill="#015bf5">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="383.0" prefWidth="837.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane prefHeight="408.0" prefWidth="866.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="864.0">
+                     <children>
+                        <TableView fx:id="patientTable" prefHeight="509.0" prefWidth="866.0">
+                          <columns>
+                            <TableColumn fx:id="showID" prefWidth="100.0" text="Patient ID" />
+                            <TableColumn fx:id="showFirstName" prefWidth="125.0" text="First Name" />
+                              <TableColumn fx:id="showLastName" prefWidth="125.0" text="Last Name" />
+                              <TableColumn fx:id="showGender" prefWidth="60.0" text="Gender" />
+                              <TableColumn fx:id="showBirth" prefWidth="90.0" text="Birth" />
+                              <TableColumn fx:id="showPhone" prefWidth="120.0" text="Phone" />
+                              <TableColumn fx:id="showAddress" prefWidth="140.0" text="Address" />
+                              <TableColumn fx:id="showTestDate" prefWidth="90.0" text="Test Date" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
