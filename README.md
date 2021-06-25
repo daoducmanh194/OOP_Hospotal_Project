@@ -11,8 +11,8 @@ Currently, the demand for medical examination and treatment and health examinati
 3. Database: code for generate table
 4. Final_OOP_report:final report of this project
 
-![https://dochub.com/daomanhkaiyako/jo3xELpR3Qna5m8VJBa7nr/screenshot-from-2021-06-24-11-55-47-png](https://dochub.com/daomanhkaiyako/jo3xELpR3Qna5m8VJBa7nr/screenshot-from-2021-06-24-11-55-47-png)
-![https://dochub.com/daomanhkaiyako/7vA0q9lw2mp4LnGVPDNOxd/screenshot-from-2021-06-24-11-57-19-png](https://dochub.com/daomanhkaiyako/7vA0q9lw2mp4LnGVPDNOxd/screenshot-from-2021-06-24-11-57-19-png)
+![UsecaseDiagram](https://dochub.com/daomanhkaiyako/jo3xELpR3Qna5m8VJBa7nr/screenshot-from-2021-06-24-11-55-47-png)
+![ClassDiagram](https://dochub.com/daomanhkaiyako/7vA0q9lw2mp4LnGVPDNOxd/screenshot-from-2021-06-24-11-57-19-png)
 
 # Install project
 * Clone the project with git: !git clone [repos_link]
